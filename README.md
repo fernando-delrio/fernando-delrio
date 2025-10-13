@@ -41,8 +41,14 @@
   <a href="https://www.linkedin.com/in/fernando-david-del-rio-96b71168/">
     <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" />
   </a>
-  <a href="fernandogondelrio@gmail.com">
+  <a href="mailto:fernandogondelrio@gmail.com">
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" />
+  </a>
+  <a href="https://es.pinterest.com/fernandodavidgonzalezdelrio/">
+    <img src="https://img.shields.io/badge/Pinterest-%23E60023.svg?style=for-the-badge&logo=Pinterest&logoColor=white" />
+  </a>
+  <a href="https://stackoverflow.com/users/31213509/fernando-del-rio">
+    <img src="https://img.shields.io/badge/Stack_Overflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" />
   </a>
 </p>
 
