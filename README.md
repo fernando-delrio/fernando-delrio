@@ -56,10 +56,9 @@
 
 ---
 
-## 💬 Frase del Día
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
+## 💬 Frase del Día 
+<p align="center"> 
+  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=Disfruto%20los%20momentos%20felices%20en%20honor%20a%20los%20tiempos%20difíciles" /> 
 </p>
 
 ---
