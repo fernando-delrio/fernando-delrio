@@ -19,21 +19,23 @@
 ## 🏆 Trofeos GitHub
 
 <p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=fernando-delrio&theme=radical&no-bg=true&margin-w=15" />
+  <img src="https://github-profile-trophy.vercel.app/?username=fernando-delrio&theme=radical&row=1&column=6&no-frame=true" />
 </p>
+
+
 
 ---
 
 ## 🛠️ Tecnologías & Herramientas
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,reactquery,reactrouter,vite,nodejs,python,fastapi,flask" /><br/>
-  <img src="https://skillicons.dev/icons?i=mysql,postgresql,prisma,git,github,vercel,figma,eslint,vscode" />
+  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,reactquery,reactrouter,vite,nodejs,python,fastapi,flask,mysql,postgresql,prisma,git,github,vercel,figma,eslint,vscode&perline=12" />
 </p>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white"/>
 </p>
+
 
 ---
 
@@ -45,11 +47,7 @@
 
 ---
 
-## 💬 Frase del Día
-
-<p align="center">
-  <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical"/>
-</p>
+## 💬 Frase del Día <p align="center"> <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=Disfruto%20los%20momentos%20felices%20en%20honor%20a%20los%20tiempos%20difíciles" /> </p>
 
 ---
 
