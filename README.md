@@ -28,13 +28,108 @@
 
 ## 🛠️ Tecnologías & Herramientas
 
-<p align="center">
-  <img src="https://skillicons.dev/icons?i=html,css,js,ts,react,reactquery,reactrouter,vite,nodejs,python,fastapi,flask,mysql,postgresql,prisma,git,github,vercel,figma,eslint,vscode&perline=12" />
-</p>
+<table align="center">
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=html" /><br/>
+      <b>HTML</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=css" /><br/>
+      <b>CSS</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=js" /><br/>
+      <b>JavaScript</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=ts" /><br/>
+      <b>TypeScript</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=react" /><br/>
+      <b>React</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=reactquery" /><br/>
+      <b>React Query</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=reactrouter" /><br/>
+      <b>React Router</b>
+    </td>
+  </tr>
 
-<p align="center">
-  
-</p>
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vite" /><br/>
+      <b>Vite</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=nodejs" /><br/>
+      <b>Node.js</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=python" /><br/>
+      <b>Python</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=fastapi" /><br/>
+      <b>FastAPI</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=flask" /><br/>
+      <b>Flask</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=mysql" /><br/>
+      <b>MySQL</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=postgresql" /><br/>
+      <b>PostgreSQL</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=prisma" /><br/>
+      <b>Prisma</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=git" /><br/>
+      <b>Git</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=github" /><br/>
+      <b>GitHub</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vercel" /><br/>
+      <b>Vercel</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://img.shields.io/badge/Render-000000?style=flat&logo=render&logoColor=white"/><br/>
+      <b>Render</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=figma" /><br/>
+      <b>Figma</b>
+    </td>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=eslint" /><br/>
+      <b>ESLint</b>
+    </td>
+  </tr>
+
+  <tr>
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=vscode" /><br/>
+      <b>VS Code</b>
+    </td>
+  </tr>
+</table>
+
 
 
 ---
