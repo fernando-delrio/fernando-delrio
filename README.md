@@ -50,7 +50,10 @@
       <img src="https://skillicons.dev/icons?i=react" /><br/>
       <b>React</b>
     </td>
-   
+    <td align="center" width="96">
+      <img src="https://skillicons.dev/icons?i=reactquery" /><br/>
+      <b>React Query</b>
+    </td>
     <td align="center" width="96">
       <img src="https://skillicons.dev/icons?i=reactrouter" /><br/>
       <b>React Router</b>
@@ -126,6 +129,7 @@
     </td>
   </tr>
 </table>
+
 
 
 
