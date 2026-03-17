@@ -43,10 +43,6 @@
       <b>JavaScript</b>
     </td>
     <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=ts" /><br/>
-      <b>TypeScript</b>
-    </td>
-    <td align="center" width="96">
       <img src="https://skillicons.dev/icons?i=react" /><br/>
       <b>React</b>
     </td>
