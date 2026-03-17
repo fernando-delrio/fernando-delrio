@@ -28,103 +28,37 @@
 
 ## 🛠️ Tecnologías & Herramientas
 
-<table align="center">
-  <tr>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=html" /><br/>
-      <b>HTML</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=css" /><br/>
-      <b>CSS</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=js" /><br/>
-      <b>JavaScript</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=react" /><br/>
-      <b>React</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=reactquery" /><br/>
-      <b>React Query</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=reactrouter" /><br/>
-      <b>React Router</b>
-    </td>
-  </tr>
+<h4 align="center">Frontend</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=F7DF1E"/>
+  <img src="https://img.shields.io/badge/React-000000?style=flat&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/React%20Query-000000?style=flat&logo=reactquery&logoColor=FF4154"/>
+  <img src="https://img.shields.io/badge/React%20Router-000000?style=flat&logo=reactrouter&logoColor=CA4245"/>
+  <img src="https://img.shields.io/badge/Vite-000000?style=flat&logo=vite&logoColor=646CFF"/>
+</p>
 
-  <tr>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=vite" /><br/>
-      <b>Vite</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=nodejs" /><br/>
-      <b>Node.js</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=python" /><br/>
-      <b>Python</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=fastapi" /><br/>
-      <b>FastAPI</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=flask" /><br/>
-      <b>Flask</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=mysql" /><br/>
-      <b>MySQL</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=postgresql" /><br/>
-      <b>PostgreSQL</b>
-    </td>
-  </tr>
+<h4 align="center">Backend</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/Python-000000?style=flat&logo=python&logoColor=3776AB"/>
+  <img src="https://img.shields.io/badge/FastAPI-000000?style=flat&logo=fastapi&logoColor=009688"/>
+  <img src="https://img.shields.io/badge/Node.js-000000?style=flat&logo=node.js&logoColor=339933"/>
+  <img src="https://img.shields.io/badge/Prisma-000000?style=flat&logo=prisma&logoColor=2D3748"/>
+</p>
 
-  <tr>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=prisma" /><br/>
-      <b>Prisma</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=git" /><br/>
-      <b>Git</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=github" /><br/>
-      <b>GitHub</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=vercel" /><br/>
-      <b>Vercel</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://img.shields.io/badge/Render-000000?style=flat&logo=render&logoColor=white"/><br/>
-      <b>Render</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=figma" /><br/>
-      <b>Figma</b>
-    </td>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=eslint" /><br/>
-      <b>ESLint</b>
-    </td>
-  </tr>
+<h4 align="center">Database</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/PostgreSQL-000000?style=flat&logo=postgresql&logoColor=4169E1"/>
+</p>
 
-  <tr>
-    <td align="center" width="96">
-      <img src="https://skillicons.dev/icons?i=vscode" /><br/>
-      <b>VS Code</b>
-    </td>
-  </tr>
-</table>
+<h4 align="center">DevOps & Tools</h4>
+<p align="center">
+  <img src="https://img.shields.io/badge/Git-000000?style=flat&logo=git&logoColor=F05032"/>
+  <img src="https://img.shields.io/badge/GitHub-000000?style=flat&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Render-000000?style=flat&logo=render&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ESLint-000000?style=flat&logo=eslint&logoColor=4B32C3"/>
+  <img src="https://img.shields.io/badge/Figma-000000?style=flat&logo=figma&logoColor=F24E1E"/>
+</p>
 
 
 
