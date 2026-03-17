@@ -1,9 +1,43 @@
 <h1 align="center">👋 ¡Hola! Soy Fernando Del Río</h1>
-<h3 align="center">🎯 Software Developer Full Stack | ⛰️ Amante de la Montaña</h3>
+<h3 align="center">🎯 Frontend Developer | Construyendo productos reales</h3>
 
 <p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF6B8B&center=true&vCenter=true&width=520&lines=📍+El+Bierzo%2C+León;💻+Full+Stack+Developer;⚛️+React+%2B+FastAPI;🚀+Aprendiz+Continuo;⛰️+MTB+Lover" />
+  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=FF6B8B&center=true&vCenter=true&width=520&lines=📍+El+Bierzo%2C+León;💻+Frontend+Developer;⚛️+React+%2B+Arquitectura+Moderna;🚀+Construyendo+Weldix;⛰️+MTB+%26+Trail+Lover" />
 </p>
+
+---
+
+## 🚀 Sobre mí
+
+💻 Frontend Developer enfocado en construir interfaces reales y escalables  
+⚛️ Especializado en React y arquitectura de aplicaciones  
+🔌 Con conocimientos de backend (FastAPI, APIs, lógica de negocio)  
+🚀 Enfocado en productos tipo SaaS  
+
+---
+
+## 🚀 Proyectos Destacados
+
+### 🔧 Weldix — Gestión de talleres (SaaS en desarrollo)
+
+→ Sistema de órdenes de trabajo con flujo de estados  
+→ Arquitectura basada en configuración (sin lógica condicional duplicada)  
+→ Frontend en React con render dinámico por estado  
+→ Backend en FastAPI con validación de negocio  
+→ Base de datos PostgreSQL  
+
+🧠 Enfoque: arquitectura frontend + integración con lógica de negocio
+
+---
+
+### 🚵 Trail App — Registro de rutas y actividad
+
+→ Registro de rutas (MTB / Trail / carretera)  
+→ Sistema de tipos de actividad y métricas  
+→ Interfaz enfocada a uso rápido en campo  
+→ Gestión de recorridos y datos de usuario  
+
+🧠 Enfoque: UX + experiencia real de usuario
 
 ---
 
@@ -16,64 +50,46 @@
 
 ---
 
-## 🏆 Trofeos GitHub
-
-<p align="center">
-  <img src="https://github-profile-trophy.vercel.app/?username=fernando-delrio&theme=radical&row=1&column=6&no-frame=true" />
-</p>
-
-
-
----
-
 ## 🛠️ Tecnologías & Herramientas
 
 <h4 align="center">Frontend</h4>
 <p align="center">
-  <img src="https://img.shields.io/badge/JavaScript-000000?style=flat&logo=javascript&logoColor=F7DF1E"/>
-  <img src="https://img.shields.io/badge/React-000000?style=flat&logo=react&logoColor=61DAFB"/>
-  <img src="https://img.shields.io/badge/React%20Query-000000?style=flat&logo=reactquery&logoColor=FF4154"/>
-  <img src="https://img.shields.io/badge/React%20Router-000000?style=flat&logo=reactrouter&logoColor=CA4245"/>
-  <img src="https://img.shields.io/badge/Vite-000000?style=flat&logo=vite&logoColor=646CFF"/>
+  <img src="https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=F7DF1E"/>
+  <img src="https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB"/>
+  <img src="https://img.shields.io/badge/React%20Query-000000?style=for-the-badge&logo=reactquery&logoColor=FF4154"/>
+  <img src="https://img.shields.io/badge/React%20Router-000000?style=for-the-badge&logo=reactrouter&logoColor=CA4245"/>
+  <img src="https://img.shields.io/badge/Vite-000000?style=for-the-badge&logo=vite&logoColor=646CFF"/>
 </p>
 
-<h4 align="center">Backend</h4>
+<h4 align="center">Backend (conocimientos)</h4>
 <p align="center">
-  <img src="https://img.shields.io/badge/Python-000000?style=flat&logo=python&logoColor=3776AB"/>
-  <img src="https://img.shields.io/badge/FastAPI-000000?style=flat&logo=fastapi&logoColor=009688"/>
-  <img src="https://img.shields.io/badge/Node.js-000000?style=flat&logo=node.js&logoColor=339933"/>
-  <img src="https://img.shields.io/badge/Prisma-000000?style=flat&logo=prisma&logoColor=2D3748"/>
+  <img src="https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=3776AB"/>
+  <img src="https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=009688"/>
+  <img src="https://img.shields.io/badge/Node.js-000000?style=for-the-badge&logo=node.js&logoColor=339933"/>
 </p>
 
 <h4 align="center">Database</h4>
 <p align="center">
-  <img src="https://img.shields.io/badge/PostgreSQL-000000?style=flat&logo=postgresql&logoColor=4169E1"/>
+  <img src="https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=4169E1"/>
 </p>
 
-<h4 align="center">DevOps & Tools</h4>
+<h4 align="center">Tools</h4>
 <p align="center">
-  <img src="https://img.shields.io/badge/Git-000000?style=flat&logo=git&logoColor=F05032"/>
-  <img src="https://img.shields.io/badge/GitHub-000000?style=flat&logo=github&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white"/>
-  <img src="https://img.shields.io/badge/Render-000000?style=flat&logo=render&logoColor=white"/>
-  <img src="https://img.shields.io/badge/ESLint-000000?style=flat&logo=eslint&logoColor=4B32C3"/>
-  <img src="https://img.shields.io/badge/Figma-000000?style=flat&logo=figma&logoColor=F24E1E"/>
+  <img src="https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=F05032"/>
+  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white"/>
+  <img src="https://img.shields.io/badge/Render-000000?style=for-the-badge&logo=render&logoColor=white"/>
+  <img src="https://img.shields.io/badge/ESLint-000000?style=for-the-badge&logo=eslint&logoColor=4B32C3"/>
+  <img src="https://img.shields.io/badge/Figma-000000?style=for-the-badge&logo=figma&logoColor=F24E1E"/>
 </p>
-
-
-
 
 ---
 
 ## 👀 Contador de Visitantes
 
 <p align="center">
-  <img src="https://komarev.com/ghpvc/?username=fernando-delrio&color=FF6B8B&style=flat"/>
+  <img src="https://komarev.com/ghpvc/?username=fernando-delrio&color=FF6B8B&style=for-the-badge"/>
 </p>
-
----
-
-## 💬 Frase del Día <p align="center"> <img src="https://quotes-github-readme.vercel.app/api?type=horizontal&theme=radical&quote=Disfruto%20los%20momentos%20felices%20en%20honor%20a%20los%20tiempos%20difíciles" /> </p>
 
 ---
 
@@ -90,5 +106,5 @@
 
 <p align="center">
   <i>📍 El Bierzo, León</i><br/>
-  <i>💻 Full Stack Developer | 🚵 MTB Lover</i>
+  <i>💻 Frontend Developer | 🚵 MTB & Trail Lover</i>
 </p>
