@@ -19,7 +19,9 @@ Eso es Weldix.
 
 ## Weldix — SaaS multi-tenant para talleres del metal
 
-**[→ Ver el repositorio](https://github.com/fernando-delrio/weldix)**
+**[→ Probar la aplicación](https://weldix-frontend.onrender.com)** · **[→ Ver el repositorio](https://github.com/fernando-delrio/weldix)**
+
+> Desplegado en el plan gratuito de Render: la API se duerme tras un rato sin uso y el primer inicio de sesión puede tardar hasta un minuto. Los siguientes son instantáneos.
 
 Sistema de gestión para talleres de soldadura, cerrajería y metal. No un CRUD de demostración: el flujo está diseñado desde el lado del operario, no desde el diagrama entidad-relación.
 
@@ -39,7 +41,7 @@ Sistema de gestión para talleres de soldadura, cerrajería y metal. No un CRUD 
 
 ## Otros proyectos
 
-### [Trail](https://github.com/fernando-delrio/trail-) — Plataforma social full stack para ciclistas
+### [Trail](https://github.com/fernando-delrio/trail-app) — Plataforma social full stack para ciclistas
 
 Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros con suscripción. Acabó siendo bastante más.
 
@@ -70,16 +72,27 @@ Web y sistema de citas de un negocio real de electrónica del automóvil en Ponf
 
 ![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=3776AB)
 ![FastAPI](https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=009688)
+![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=4169E1)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-000000?style=for-the-badge&logo=python&logoColor=red)
+
+**Testing y CI**
+
+![Vitest](https://img.shields.io/badge/Vitest-000000?style=for-the-badge&logo=vitest&logoColor=6E9F18)
+![pytest](https://img.shields.io/badge/pytest-000000?style=for-the-badge&logo=pytest&logoColor=0A9EDC)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=2088FF)
+
+**IA y automatización**
+
+![Mistral AI](https://img.shields.io/badge/Mistral_AI-000000?style=for-the-badge&logo=mistralai&logoColor=FA520F)
+![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
+![n8n](https://img.shields.io/badge/n8n-000000?style=for-the-badge&logo=n8n&logoColor=EA4B71)
 
 **Infraestructura**
 
 ![Docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=2496ED)
-![n8n](https://img.shields.io/badge/n8n-000000?style=for-the-badge&logo=n8n&logoColor=EA4B71)
 ![Stripe](https://img.shields.io/badge/Stripe-000000?style=for-the-badge&logo=stripe&logoColor=635BFF)
 ![Git](https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=F05032)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=white)
 
 ---
 
@@ -95,4 +108,3 @@ Abierto a oportunidades como desarrollador full-stack. El Bierzo (León) o remot
     <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
   </a>
 </p>
-
