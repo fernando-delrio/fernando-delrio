@@ -1,11 +1,7 @@
 <h1 align="center">Fernando Del Río</h1>
 
 <p align="center">
-  Full-stack developer construyendo software para la industria que conozco desde dentro.
-</p>
-
-<p align="center">
-  <img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&pause=1000&color=F59E0B&center=true&vCenter=true&width=520&lines=Soldador+durante+10+años;Ahora+construyo+software+para+talleres;React+19+·+FastAPI+·+PostgreSQL;SaaS+multi-tenant+en+producción;El+Bierzo%2C+León" />
+  Diez años soldando en talleres del metal. Ahora construyo el software que me hubiera gustado tener dentro.
 </p>
 
 ---
@@ -21,37 +17,31 @@ Eso es Weldix.
 
 ---
 
-## Qué estoy construyendo
+## Weldix — SaaS multi-tenant para talleres del metal
 
-### Weldix — SaaS multi-tenant para talleres del metal
+**[→ Ver el repositorio](https://github.com/fernando-delrio/weldix)**
 
-Un sistema de gestión completo para talleres de soldadura, cerrajería y metal.
-No un CRUD de demo — un producto real con talleres reales usándolo.
+Sistema de gestión para talleres de soldadura, cerrajería y metal. No un CRUD de demostración: el flujo está diseñado desde el lado del operario, no desde el diagrama entidad-relación.
 
-**Lo que hace:**
-- Órdenes de trabajo con flujo de estados (pendiente → en proceso → control → listo → entregado)
-- Fichaje de operarios desde tablet o móvil
-- Gestión de materiales con alertas de stock bajo
-- RRHH: vacaciones, ausencias, festivos e informes mensuales
-- GMAO: estado de maquinaria del taller con alertas de mantenimiento
-- IA integrada con contexto real del taller (Mistral)
-- Escáner QR para iniciar trabajos sin teclear
-- Panel admin con métricas globales
+- Órdenes de trabajo con máquina de estados (pendiente → en proceso → control → listo → entregado)
+- Fichaje de operarios desde tablet o móvil, y escáner QR para iniciar trabajos sin teclear
+- Materiales con alertas de stock bajo
+- RRHH: vacaciones, ausencias, festivos, informes mensuales
+- GMAO: estado de maquinaria con alertas de mantenimiento
+- Asistente de IA con contexto real del taller (Mistral)
 - Automatizaciones con n8n: WhatsApp al cliente cuando una OT está lista, alertas de stock, resúmenes diarios
 
-**Stack:**
-React 19 · Vite · Tailwind CSS v4 · FastAPI · SQLAlchemy · PostgreSQL · JWT multi-rol · Stripe · Resend · n8n + Docker · Pydantic v2
+**Stack:** React 19 · Vite · Tailwind v4 · FastAPI · SQLAlchemy · PostgreSQL · Pydantic v2 · JWT multi-rol · Stripe · Resend · n8n + Docker
 
-**Arquitectura:**
-Multi-tenant con aislamiento por `tenant_id`, trial automático de 15 días, feature-based modules en frontend, capas router → service → model en backend.
+**Arquitectura:** multi-tenant con aislamiento por `tenant_id`, trial automático de 15 días, módulos por feature en frontend, capas router → service → model en backend.
 
 ---
 
-## Otras cosas que he construido
+## Otros proyectos
 
-**Trail App** — Registro de rutas para MTB, trail y carretera.
-Nació de otra necesidad real: quería llevar mis rutas sin depender de apps de terceros con suscripción.
-React · métricas por actividad · interfaz para uso rápido en campo.
+**Tools Equip** *(código privado)* — Web y sistema de citas de un negocio real de electrónica del automóvil en Ponferrada. React 19 + FastAPI, motor de citas con detección de conflictos, 17 tests y CI en GitHub Actions.
+
+**[Trail App](https://github.com/fernando-delrio/trail-)** — Registro de rutas para MTB, trail y carretera. Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros con suscripción.
 
 ---
 
@@ -71,7 +61,7 @@ React · métricas por actividad · interfaz para uso rápido en campo.
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=4169E1)
 ![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-000000?style=for-the-badge&logo=python&logoColor=red)
 
-**Infraestructura y herramientas**
+**Infraestructura**
 
 ![Docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=2496ED)
 ![n8n](https://img.shields.io/badge/n8n-000000?style=for-the-badge&logo=n8n&logoColor=EA4B71)
@@ -81,16 +71,9 @@ React · métricas por actividad · interfaz para uso rápido en campo.
 
 ---
 
-## Estadísticas
-
-<p align="center">
-  <img height="160" src="https://github-readme-stats-sigma-five.vercel.app/api?username=fernando-delrio&show_icons=true&theme=radical&count_private=true&include_all_commits=true"/>
-  <img height="160" src="https://github-readme-stats-sigma-five.vercel.app/api/top-langs/?username=fernando-delrio&layout=compact&theme=radical"/>
-</p>
-
----
-
 ## Conectamos
+
+Abierto a oportunidades como desarrollador full-stack. El Bierzo (León) o remoto.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/fernando-david-del-rio-96b71168/">
@@ -101,6 +84,3 @@ React · métricas por actividad · interfaz para uso rápido en campo.
   </a>
 </p>
 
-<p align="center">
-  <img src="https://komarev.com/ghpvc/?username=fernando-delrio&color=F59E0B&style=for-the-badge"/>
-</p>
