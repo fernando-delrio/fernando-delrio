@@ -39,9 +39,21 @@ Sistema de gestión para talleres de soldadura, cerrajería y metal. No un CRUD 
 
 ## Otros proyectos
 
-**Tools Equip** *(código privado)* — Web y sistema de citas de un negocio real de electrónica del automóvil en Ponferrada. React 19 + FastAPI, motor de citas con detección de conflictos, 17 tests y CI en GitHub Actions.
+### [Trail](https://github.com/fernando-delrio/trail-) — Plataforma social full stack para ciclistas
 
-**[Trail App](https://github.com/fernando-delrio/trail-)** — Registro de rutas para MTB, trail y carretera. Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros con suscripción.
+Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros con suscripción. Acabó siendo bastante más.
+
+- Rutas GPS sobre mapas interactivos con capas dinámicas
+- Servicios cercanos al recorrido (hospitales, talleres, gasolineras) vía **OpenStreetMap + Overpass API**
+- Garaje de bicicletas con seguimiento de mantenimiento
+- **Recomendador de bicis y componentes con IA local** — microservicio propio sobre Ollama + Qwen 2.5
+- Actividad social entre usuarios
+
+**Stack:** React · Vite · MapLibre · Flask · SQLAlchemy · PostgreSQL · JWT · Ollama
+
+### Tools Equip *(código privado)*
+
+Web y sistema de citas de un negocio real de electrónica del automóvil en Ponferrada. React 19 + FastAPI, motor de citas con detección de conflictos de horario, 17 tests y CI en GitHub Actions.
 
 ---
 
