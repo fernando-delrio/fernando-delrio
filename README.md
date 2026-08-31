@@ -11,15 +11,15 @@
 Pasé 10 años trabajando como soldador en talleres del metal.
 Sé lo que es gestionar órdenes de trabajo en papel, perder el control del stock, o no saber qué está haciendo cada operario sin ir a preguntarle.
 
-Cuando aprendí a programar, lo primero que hice fue construir la herramienta que me hubiera gustado tener.
+Cuando aprendí a programar, dejé de hacer ejercicios de curso y empecé a construir software para problemas reales: el mío, el de un cerrajero de Ponferrada, el de un taller de electrónica del automóvil, el de un entrenador personal.
 
-Eso es Weldix.
+Weldix es el más grande de todos y el que más lejos he llevado — no un prototipo, un producto en producción con clientes reales.
 
 ---
 
 ## Weldix — SaaS multi-tenant para talleres del metal
 
-**[→ Probar la aplicación](https://weldix-frontend.onrender.com)** · **[→ Ver el repositorio](https://github.com/fernando-delrio/weldix)**
+**[→ Probar la aplicación](https://weldix.es)** · **[→ Ver el repositorio](https://github.com/fernando-delrio/weldix)**
 
 > Desplegado en el plan gratuito de Render: la API se duerme tras un rato sin uso y el primer inicio de sesión puede tardar hasta un minuto. Los siguientes son instantáneos.
 
@@ -41,6 +41,20 @@ Sistema de gestión para talleres de soldadura, cerrajería y metal. No un CRUD 
 
 ## Otros proyectos
 
+### Tools Equip *(código privado)*
+
+Web y sistema de citas de un negocio real de electrónica del automóvil en Ponferrada. React 19 + FastAPI, motor de citas con detección de conflictos de horario, 17 tests y CI en GitHub Actions.
+
+### [Kinovia](https://github.com/fernando-delrio/kinovia) — SaaS para entrenadores personales *(en desarrollo)*
+
+Planes de entrenamiento que se adaptan a la condición física real del cliente, no al revés. Un entrenador crea plantillas (fases → días → ejercicios) y las asigna a sus clientes, que registran su seguimiento desde su propia cuenta.
+
+El diferenciador vive en el propio dato: un **motor de sustitución de ejercicios por condición física** (cadera, rodilla, diástasis abdominal...) integrado en la plantilla, no una nota manual aparte — lo que separa a Kinovia de un Trainerize o TrueCoach genérico.
+
+Multi-tenant desde el diseño: muchos entrenadores, cada uno con sus clientes, aislados por Row Level Security de Postgres, nunca por lógica de aplicación.
+
+**Stack:** React 19 · Vite · Tailwind v4 · Supabase (Postgres, Auth, RLS) · Cucumber para tests de aceptación
+
 ### [Trail](https://github.com/fernando-delrio/trail-app) — Plataforma social full stack para ciclistas
 
 Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros con suscripción. Acabó siendo bastante más.
@@ -52,10 +66,6 @@ Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros
 - Actividad social entre usuarios
 
 **Stack:** React · Vite · MapLibre · Flask · SQLAlchemy · PostgreSQL · JWT · Ollama
-
-### Tools Equip *(código privado)*
-
-Web y sistema de citas de un negocio real de electrónica del automóvil en Ponferrada. React 19 + FastAPI, motor de citas con detección de conflictos de horario, 17 tests y CI en GitHub Actions.
 
 ---
 
