@@ -1,71 +1,74 @@
-<h1 align="center">Fernando Del Río</h1>
-
 <p align="center">
-  Diez años soldando en talleres del metal. Ahora construyo el software que me hubiera gustado tener dentro.
+  <img src="./assets/cabecera.svg" alt="Fernando Del Río. Software developer. Mantengo y escalo toolsequip.es. Asistente telefónico y chatbot, desde cero. Agentes de IA que escriben código como lo escribo yo." width="100%"/>
 </p>
-
----
 
 ## Quién soy
 
-Pasé 10 años trabajando como soldador en talleres del metal.
-Sé lo que es gestionar órdenes de trabajo en papel, perder el control del stock, o no saber qué está haciendo cada operario sin ir a preguntarle.
+Pasé diez años soldando en talleres del metal. Hoy trabajo como **software developer**: mantengo y escalo una web en producción y desarrollo desde cero un asistente telefónico y un chatbot que atienden a clientes reales.
 
-Cuando aprendí a programar, dejé de hacer ejercicios de curso y empecé a construir software para problemas reales: el mío, el de un cerrajero de Ponferrada, el de un taller de electrónica del automóvil, el de un entrenador personal.
-
-Weldix es el más grande de todos y el que más lejos he llevado — no un prototipo, un producto en producción con clientes reales.
+Me gusta el código que se entiende a la primera, también el que escribe la IA.
 
 ---
 
-## Weldix — SaaS multi-tenant para talleres del metal
+## Proyectos reales
 
-**[→ Probar la aplicación](https://weldix.es)** · **[→ Ver el repositorio](https://github.com/fernando-delrio/weldix)**
+### [toolsequip.es](https://toolsequip.es) · mantenimiento y escalado
 
-> Desplegado en el plan gratuito de Render: la API se duerme tras un rato sin uso y el primer inicio de sesión puede tardar hasta un minuto. Los siguientes son instantáneos.
+Mantengo la web y la hago crecer:
 
-Sistema de gestión para talleres de soldadura, cerrajería y metal. No un CRUD de demostración: el flujo está diseñado desde el lado del operario, no desde el diagrama entidad-relación.
+- **Área de cliente**, para que cada cliente siga lo suyo sin tener que llamar.
+- **Métodos de pago** integrados en la propia web.
+- **Redes sociales** conectadas con la plataforma.
 
-- Órdenes de trabajo con máquina de estados (pendiente → en proceso → control → listo → entregado)
-- Fichaje de operarios desde tablet o móvil, y escáner QR para iniciar trabajos sin teclear
-- Materiales con alertas de stock bajo
-- RRHH: vacaciones, ausencias, festivos, informes mensuales
-- GMAO: estado de maquinaria con alertas de mantenimiento
-- Asistente de IA con contexto real del taller (Mistral)
-- Automatizaciones con n8n: WhatsApp al cliente cuando una OT está lista, alertas de stock, resúmenes diarios
+### Asistente telefónico y chatbot · desde cero *(código privado)*
 
-**Stack:** React 19 · Vite · Tailwind v4 · FastAPI · SQLAlchemy · PostgreSQL · Pydantic v2 · JWT multi-rol · Stripe · Resend · n8n + Docker
+Un asistente virtual atiende el teléfono, toma los pedidos de recambios de los talleres y los deja listos para que una persona revise compatibilidad y stock.
 
-**Arquitectura:** multi-tenant con aislamiento por `tenant_id`, trial automático de 15 días, módulos por feature en frontend, capas router → service → model en backend.
+- **Asistente de voz con Vapi:** entiende el pedido, deletrea la matrícula si hay duda y llama a una API propia en FastAPI.
+- **Pedidos en PostgreSQL** con numeración segura y sin duplicados aunque Vapi reintente la llamada.
+- **Panel interno en React + TypeScript** para revisar, preparar y entregar cada pedido, con resguardo en PDF.
+- **Seguridad desde el principio:** webhook protegido con secreto, migraciones versionadas y CI con pruebas contra un PostgreSQL temporal y auditoría de dependencias.
+- **En marcha:** chatbot con **Chatwoot** para atender también por escrito.
+
+### [Weldix](https://github.com/fernando-delrio/weldix) · SaaS multi-tenant para talleres del metal · **[→ probar](https://weldix.es)**
+
+Mi proyecto propio más grande, en producción. Pensado desde el lado del operario, no desde el diagrama entidad-relación: órdenes de trabajo con máquina de estados, fichaje con QR desde tablet, stock con alertas, RRHH, mantenimiento de maquinaria, asistente de IA con el contexto del taller (Mistral) y avisos por WhatsApp con n8n.
+
+`React 19` `Vite` `Tailwind v4` `FastAPI` `SQLAlchemy` `PostgreSQL` `Stripe` `n8n` · aislamiento por `tenant_id` y capas router → service → model.
+
+> En el plan gratuito de Render: el primer inicio de sesión puede tardar hasta un minuto.
 
 ---
 
-## Otros proyectos
+## Cómo trabajo con IA
 
-### Tools Equip *(código privado)*
+Uso agentes de IA para programar, pero el código tiene que poder leerlo y cambiarlo yo sin ayuda. Para eso tengo montado un **arnés propio sobre Claude Code**:
 
-Web y sistema de citas de un negocio real de electrónica del automóvil en Ponferrada. React 19 + FastAPI, motor de citas con detección de conflictos de horario, 17 tests y CI en GitHub Actions.
+<p align="center">
+  <img src="./assets/flujo-ia.svg" alt="Flujo de trabajo: yo, spec, plan y tareas, implementer, revisores y hook de cierre; y vuelve a mí para revisarlo." width="100%"/>
+</p>
 
-### [Kinovia](https://github.com/fernando-delrio/kinovia) — SaaS para entrenadores personales *(en desarrollo)*
+- **Spec antes que código:** cada funcionalidad empieza por requisitos, plan y tareas que apruebo yo antes de que se toque una línea.
+- **Un agente implementa una sola tarea**, con la prueba primero, y nunca hace commit: eso lo hago yo.
+- **Agentes revisores:** uno comprueba mi norma de estilo, otro el oficio (SOLID, Clean Code, Ousterhout, McConnell) y otro la seguridad del backend (OWASP).
+- **Hook de cierre:** al terminar, pasa formateador, linter y la prueba de la norma solo a las líneas cambiadas, y devuelve los fallos al agente para que los corrija.
+- **Mi norma de estilo**, en un plugin propio: funciones cortas, guardas en lugar de `else`, tablas en lugar de cadenas de `if`, sin ternarios, nombres con sentido y errores en un solo sitio.
 
-Planes de entrenamiento que se adaptan a la condición física real del cliente, no al revés. Un entrenador crea plantillas (fases → días → ejercicios) y las asigna a sus clientes, que registran su seguimiento desde su propia cuenta.
+Así escribo, y así tiene que escribir la IA:
 
-El diferenciador vive en el propio dato: un **motor de sustitución de ejercicios por condición física** (cadera, rodilla, diástasis abdominal...) integrado en la plantilla, no una nota manual aparte — lo que separa a Kinovia de un Trainerize o TrueCoach genérico.
+```ts
+const SIGUIENTE_ESTADO = {
+  pendiente: 'en_proceso',
+  en_proceso: 'listo',
+  listo: 'entregado',
+  entregado: 'entregado',
+} as const
 
-Multi-tenant desde el diseño: muchos entrenadores, cada uno con sus clientes, aislados por Row Level Security de Postgres, nunca por lógica de aplicación.
-
-**Stack:** React 19 · Vite · Tailwind v4 · Supabase (Postgres, Auth, RLS) · Cucumber para tests de aceptación
-
-### [Trail](https://github.com/fernando-delrio/trail-app) — Plataforma social full stack para ciclistas
-
-Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros con suscripción. Acabó siendo bastante más.
-
-- Rutas GPS sobre mapas interactivos con capas dinámicas
-- Servicios cercanos al recorrido (hospitales, talleres, gasolineras) vía **OpenStreetMap + Overpass API**
-- Garaje de bicicletas con seguimiento de mantenimiento
-- **Recomendador de bicis y componentes con IA local** — microservicio propio sobre Ollama + Qwen 2.5
-- Actividad social entre usuarios
-
-**Stack:** React · Vite · MapLibre · Flask · SQLAlchemy · PostgreSQL · JWT · Ollama
+export const avanzarPedido = (pedido: Pedido) => {
+  if (pedido.isAnulado) return pedido
+  return { ...pedido, estado: SIGUIENTE_ESTADO[pedido.estado] }
+}
+```
 
 ---
 
@@ -73,48 +76,37 @@ Nació de otra necesidad real: llevar mis rutas sin depender de apps de terceros
 
 **Frontend**
 
-![JavaScript](https://img.shields.io/badge/JavaScript-000000?style=for-the-badge&logo=javascript&logoColor=F7DF1E)
-![React](https://img.shields.io/badge/React-000000?style=for-the-badge&logo=react&logoColor=61DAFB)
-![Vite](https://img.shields.io/badge/Vite-000000?style=for-the-badge&logo=vite&logoColor=646CFF)
-![TailwindCSS](https://img.shields.io/badge/Tailwind-000000?style=for-the-badge&logo=tailwindcss&logoColor=38BDF8)
+<img src="./assets/stack-frontend.svg" alt="TypeScript, React, JavaScript, Vite y Tailwind"/>
 
-**Backend**
+**Backend y datos**
 
-![Python](https://img.shields.io/badge/Python-000000?style=for-the-badge&logo=python&logoColor=3776AB)
-![FastAPI](https://img.shields.io/badge/FastAPI-000000?style=for-the-badge&logo=fastapi&logoColor=009688)
-![Flask](https://img.shields.io/badge/Flask-000000?style=for-the-badge&logo=flask&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-000000?style=for-the-badge&logo=postgresql&logoColor=4169E1)
-![SQLAlchemy](https://img.shields.io/badge/SQLAlchemy-000000?style=for-the-badge&logo=python&logoColor=red)
+<img src="./assets/stack-backend.svg" alt="Python, FastAPI, Pydantic, PostgreSQL, SQLAlchemy, Supabase y Flask"/>
 
-**Testing y CI**
+**IA, voz y automatización**
 
-![Vitest](https://img.shields.io/badge/Vitest-000000?style=for-the-badge&logo=vitest&logoColor=6E9F18)
-![pytest](https://img.shields.io/badge/pytest-000000?style=for-the-badge&logo=pytest&logoColor=0A9EDC)
-![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-000000?style=for-the-badge&logo=githubactions&logoColor=2088FF)
+<img src="./assets/stack-ia.svg" alt="Claude Code, Vapi, Chatwoot, n8n, Mistral y Ollama"/>
 
-**IA y automatización**
+**Calidad y CI**
 
-![Mistral AI](https://img.shields.io/badge/Mistral_AI-000000?style=for-the-badge&logo=mistralai&logoColor=FA520F)
-![Ollama](https://img.shields.io/badge/Ollama-000000?style=for-the-badge&logo=ollama&logoColor=white)
-![n8n](https://img.shields.io/badge/n8n-000000?style=for-the-badge&logo=n8n&logoColor=EA4B71)
+<img src="./assets/stack-calidad.svg" alt="Vitest, pytest, ESLint, Prettier, Ruff y GitHub Actions"/>
 
-**Infraestructura**
+**Infraestructura y pagos**
 
-![Docker](https://img.shields.io/badge/Docker-000000?style=for-the-badge&logo=docker&logoColor=2496ED)
-![Stripe](https://img.shields.io/badge/Stripe-000000?style=for-the-badge&logo=stripe&logoColor=635BFF)
-![Git](https://img.shields.io/badge/Git-000000?style=for-the-badge&logo=git&logoColor=F05032)
+<img src="./assets/stack-infra.svg" alt="Docker, Stripe y Git"/>
 
 ---
 
-## Conectamos
+## Hablamos
 
-Abierto a oportunidades como desarrollador full-stack. El Bierzo (León) o remoto.
+Si quieres hablar de agentes de IA, de código que se pueda leer o de un proyecto, escríbeme. El Bierzo (León) o remoto.
 
 <p align="center">
   <a href="https://www.linkedin.com/in/fernando-david-del-rio-96b71168/">
-    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"/>
+    <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn"/>
   </a>
   <a href="mailto:fernandogondelrio@gmail.com">
-    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"/>
+    <img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" alt="Correo"/>
   </a>
 </p>
+
+<sub>Las imágenes animadas se generan con <code>npm run imagenes</code> (<a href="./scripts/">scripts/</a>), con logos de <a href="https://simpleicons.org">Simple Icons</a>.</sub>

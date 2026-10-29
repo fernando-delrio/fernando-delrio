@@ -1,0 +1,11 @@
+{
+  "name": "perfil-fernando-del-rio",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "imagenes": "node scripts/generar-imagenes.mjs"
+  },
+  "devDependencies": {
+    "simple-icons": "^16.36.0"
+  }
+}
