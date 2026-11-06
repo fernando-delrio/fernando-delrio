@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="176" viewBox="0 0 900 176" role="img" aria-label="Casi el 90 % del código que entra lo reviso yo. Leo el diff en este orden: Textos, Tests, Docs, Código">
+  <title>Casi el 90 % del código que entra lo reviso yo. Leo el diff en este orden: Textos, Tests, Docs, Código</title>
+  <style>
+    .previo { font: 500 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #8b949e; }
+    .cifra { font: 800 64px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: url(#acento); letter-spacing: -1px; }
+    .pie { font: 500 14px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #c9d1d9; }
+    .pista { fill: #21262d; }
+    .relleno { fill: url(#acento); transform-box: fill-box; transform-origin: left center;
+      animation: llenar 1.6s .3s cubic-bezier(.2, .8, .2, 1) both; }
+    .cabecera-de-pasos { font: 600 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #8b949e; letter-spacing: .4px; }
+    .paso { fill: #161b22; stroke: #30363d; stroke-width: 1.5; animation: encender 4.40s infinite both; }
+    .numero { font: 700 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #D97757; text-anchor: middle; }
+    .titulo { font: 700 15px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #e6edf3; text-anchor: middle; }
+    .detalle { font: 400 12px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #8b949e; text-anchor: middle; }
+    .flecha { font: 700 16px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #6e7681; text-anchor: middle; }
+    @keyframes llenar { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+    @keyframes encender { 0%, 22%, 100% { stroke: #30363d; } 6%, 16% { stroke: #D97757; } }
+    @media (prefers-reduced-motion: reduce) { .relleno, .paso { animation: none; } }
+  </style><rect x=".5" y=".5" width="899" height="175" rx="20" fill="#0d1117" stroke="#30363d"/><defs><linearGradient id="acento" x1="0" x2="1"><stop offset="0" stop-color="#D97757"/><stop offset="1" stop-color="#3178C6"/></linearGradient></defs>
+  <text class="previo" x="48" y="50">casi el</text>
+  <text class="cifra" x="45" y="112">90 %</text>
+  <rect class="pista" x="48" y="126" width="228" height="6" rx="3"/>
+  <rect class="relleno" x="48" y="126" width="205.20000000000002" height="6" rx="3"/>
+  <text class="pie" x="48" y="156">del código que entra lo reviso yo</text><text class="cabecera-de-pasos" x="330" y="46">MI ORDEN DE LECTURA DEL DIFF</text>
+  <g transform="translate(330 66)">
+    <rect class="paso" width="125" height="70" rx="14" style="animation-delay: 0.00s"/>
+    <text class="numero" x="62.5" y="21">1</text>
+    <text class="titulo" x="62.5" y="41">Textos</text>
+    <text class="detalle" x="62.5" y="59">los ve el cliente</text>
+  </g>
+  <g transform="translate(469 66)">
+    <rect class="paso" width="125" height="70" rx="14" style="animation-delay: 1.10s"/>
+    <text class="numero" x="62.5" y="21">2</text>
+    <text class="titulo" x="62.5" y="41">Tests</text>
+    <text class="detalle" x="62.5" y="59">¿alguno rebajado?</text>
+  </g>
+  <g transform="translate(608 66)">
+    <rect class="paso" width="125" height="70" rx="14" style="animation-delay: 2.20s"/>
+    <text class="numero" x="62.5" y="21">3</text>
+    <text class="titulo" x="62.5" y="41">Docs</text>
+    <text class="detalle" x="62.5" y="59">decisiones reales</text>
+  </g>
+  <g transform="translate(747 66)">
+    <rect class="paso" width="125" height="70" rx="14" style="animation-delay: 3.30s"/>
+    <text class="numero" x="62.5" y="21">4</text>
+    <text class="titulo" x="62.5" y="41">Código</text>
+    <text class="detalle" x="62.5" y="59">con readfirst</text>
+  </g><text class="flecha" x="462" y="106">›</text><text class="flecha" x="601" y="106">›</text><text class="flecha" x="740" y="106">›</text>
+</svg>

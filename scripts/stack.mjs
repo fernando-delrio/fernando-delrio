@@ -11,13 +11,16 @@ import {
   siMistralai,
   siN8n,
   siOllama,
+  siOxc,
   siPostgresql,
   siPrettier,
   siPydantic,
   siPytest,
   siPython,
   siReact,
+  siRender,
   siRuff,
+  siSentry,
   siSqlalchemy,
   siStripe,
   siSupabase,
@@ -29,6 +32,9 @@ import {
 
 // Vapi no está en simple-icons: una onda de voz en la misma caja de 24×24.
 const ICONO_DE_VAPI = { hex: '5DFECA', path: 'M3 9h2v6H3zM7 6h2v12H7zM11 3h2v18h-2zM15 6h2v12h-2zM19 9h2v6h-2z' }
+
+// simple-icons retiró el logo de OpenAI: para Codex, un indicador de terminal en la misma caja.
+const ICONO_DE_CODEX = { hex: 'E6EDF3', path: 'M2.6 5.4 4 4l8 8-8 8-1.4-1.4L9.2 12zM13 18h9v2h-9z' }
 
 export const CATEGORIAS = [
   {
@@ -60,6 +66,7 @@ export const CATEGORIAS = [
     titulo: 'IA, voz y automatización',
     tecnologias: [
       { icono: siClaude, nombre: 'Claude Code' },
+      { icono: ICONO_DE_CODEX, nombre: 'Codex' },
       { icono: ICONO_DE_VAPI, nombre: 'Vapi' },
       { icono: siChatwoot, nombre: 'Chatwoot' },
       { icono: siN8n, nombre: 'n8n' },
@@ -76,15 +83,18 @@ export const CATEGORIAS = [
       { icono: siEslint, nombre: 'ESLint' },
       { icono: siPrettier, nombre: 'Prettier' },
       { icono: siRuff, nombre: 'Ruff' },
+      { icono: siOxc, nombre: 'oxlint' },
       { icono: siGithubactions, nombre: 'Actions' },
     ],
   },
   {
     archivo: 'stack-infra.svg',
-    titulo: 'Infraestructura y pagos',
+    titulo: 'Infraestructura, pagos y monitorización',
     tecnologias: [
       { icono: siDocker, nombre: 'Docker' },
       { icono: siStripe, nombre: 'Stripe' },
+      { icono: siRender, nombre: 'Render' },
+      { icono: siSentry, nombre: 'Sentry' },
       { icono: siGit, nombre: 'Git' },
     ],
   },

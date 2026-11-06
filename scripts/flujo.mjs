@@ -1,22 +1,22 @@
-import { BORDE_APAGADO, envolverSvg, FUENTE, segundos } from './svg.mjs'
+import { BORDE_APAGADO, dibujarTarjetaDeFondo, envolverSvg, FUENTE, segundos } from './svg.mjs'
 
 const ANCHO = 900
-const ALTO = 190
-const ANCHO_DEL_PASO = 136
+const ALTO = 200
+const ANCHO_DEL_PASO = 128
 const ALTO_DEL_PASO = 66
 const HUECO = 15
-const ARRIBA = 24
+const ARRIBA = 30
 const BAJADA_DEL_RETORNO = 40
 const SEGUNDOS_POR_PASO = 1
 const COLOR_ENCENDIDO = '#D97757'
 
 const PASOS = [
   { titulo: 'Yo', detalle: 'idea y criterio' },
-  { titulo: 'Spec', detalle: 'requisitos EARS' },
-  { titulo: 'Plan y tareas', detalle: 'los apruebo yo' },
-  { titulo: 'Implementer', detalle: 'prueba primero' },
-  { titulo: 'Revisores', detalle: 'norma y seguridad' },
-  { titulo: 'Hook de cierre', detalle: 'linter y formato' },
+  { titulo: 'Spec y plan', detalle: 'los apruebo yo' },
+  { titulo: 'Agente IA 1', detalle: 'implementa y prueba' },
+  { titulo: 'Agente IA 2', detalle: 'revisa y veta' },
+  { titulo: 'Puertas', detalle: 'seguridad y WPO' },
+  { titulo: 'Máquina', detalle: 'lint, tests y CI' },
 ]
 
 const MARGEN = (ANCHO - PASOS.length * ANCHO_DEL_PASO - (PASOS.length - 1) * HUECO) / 2
@@ -53,7 +53,7 @@ const dibujarRetorno = () => {
   return `
   <defs><marker id="punta" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="${COLOR_ENCENDIDO}"/></marker></defs>
   <path class="retorno" marker-end="url(#punta)" d="M${centroDelPaso(ultimo)} ${ABAJO_DE_LOS_PASOS + 4} V${ALTURA_DEL_RETORNO} H${centroDelPaso(0)} V${ABAJO_DE_LOS_PASOS + 8}"/>
-  <text class="nota" x="${ANCHO / 2}" y="${ALTURA_DEL_RETORNO + 26}">vuelve a mí: código que puedo leer, revisar y cambiar sin IA</text>`
+  <text class="nota" x="${ANCHO / 2}" y="${ALTURA_DEL_RETORNO + 26}">vuelve a mí: leo el diff, decido y hago el commit</text>`
 }
 
 export const dibujarFlujo = () =>
@@ -63,6 +63,7 @@ export const dibujarFlujo = () =>
     titulo: `Flujo de trabajo con agentes: ${PASOS.map(({ titulo }) => titulo).join(', ')}, y vuelve a mí para revisarlo`,
     estilos: estilosDelFlujo(),
     contenido: [
+      dibujarTarjetaDeFondo({ ancho: ANCHO, alto: ALTO }),
       ...PASOS.map(dibujarPaso),
       ...PASOS.slice(1).map((_paso, posicion) => dibujarFlecha(posicion)),
       dibujarRetorno(),

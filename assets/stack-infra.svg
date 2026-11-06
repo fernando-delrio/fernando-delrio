@@ -1,9 +1,9 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="372" height="132" viewBox="0 0 372 132" role="img" aria-label="Stack: Infraestructura y pagos">
-  <title>Stack: Infraestructura y pagos</title>
+<svg xmlns="http://www.w3.org/2000/svg" width="612" height="132" viewBox="0 0 612 132" role="img" aria-label="Stack: Infraestructura, pagos y monitorización">
+  <title>Stack: Infraestructura, pagos y monitorización</title>
   <style>
     .tarjeta { opacity: 0; transform-box: fill-box; transform-origin: center;
       animation: aparecer 0.60s cubic-bezier(.2, .8, .2, 1) forwards, flotar 4s ease-in-out infinite; }
-    .fondo { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; animation: brillo 2.70s ease-in-out infinite; }
+    .fondo { fill: #0d1117; stroke: #30363d; stroke-width: 1.5; animation: brillo 4.50s ease-in-out infinite; }
     .nombre { font: 600 13px -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; fill: #c9d1d9; text-anchor: middle; }
     @keyframes aparecer { from { opacity: 0; transform: translateY(14px) scale(.92); } to { opacity: 1; transform: none; } }
     @keyframes flotar { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-4px); } }
@@ -26,7 +26,21 @@
   </g>
   <g transform="translate(254 14)">
     <g class="tarjeta" style="animation-delay: 0.24s, 1.54s">
-      <rect class="fondo" width="104" height="104" rx="18" style="--color: #F03C2E; animation-delay: 1.80s"/>
+      <rect class="fondo" width="104" height="104" rx="18" style="--color: #E6EDF3; animation-delay: 1.80s"/>
+      <path transform="translate(32 20) scale(1.6666666666666667)" fill="#E6EDF3" d="M18.263.007c-3.121-.147-5.744 2.109-6.192 5.082-.018.138-.045.272-.067.405-.696 3.703-3.936 6.507-7.827 6.507-1.388 0-2.691-.356-3.825-.979a.2024.2024 0 0 0-.302.178V24H12v-8.999c0-1.656 1.338-3 2.987-3h2.988c3.382 0 6.103-2.817 5.97-6.244-.12-3.084-2.61-5.603-5.682-5.75"/>
+      <text class="nombre" x="52" y="88">Render</text>
+    </g>
+  </g>
+  <g transform="translate(374 14)">
+    <g class="tarjeta" style="animation-delay: 0.36s, 2.01s">
+      <rect class="fondo" width="104" height="104" rx="18" style="--color: #E6EDF3; animation-delay: 2.70s"/>
+      <path transform="translate(32 20) scale(1.6666666666666667)" fill="#E6EDF3" d="M13.91 2.505c-.873-1.448-2.972-1.448-3.844 0L6.904 7.92a15.478 15.478 0 0 1 8.53 12.811h-2.221A13.301 13.301 0 0 0 5.784 9.814l-2.926 5.06a7.65 7.65 0 0 1 4.435 5.848H2.194a.365.365 0 0 1-.298-.534l1.413-2.402a5.16 5.16 0 0 0-1.614-.913L.296 19.275a2.182 2.182 0 0 0 .812 2.999 2.24 2.24 0 0 0 1.086.288h6.983a9.322 9.322 0 0 0-3.845-8.318l1.11-1.922a11.47 11.47 0 0 1 4.95 10.24h5.915a17.242 17.242 0 0 0-7.885-15.28l2.244-3.845a.37.37 0 0 1 .504-.13c.255.14 9.75 16.708 9.928 16.9a.365.365 0 0 1-.327.543h-2.287c.029.612.029 1.223 0 1.831h2.297a2.206 2.206 0 0 0 1.922-3.31z"/>
+      <text class="nombre" x="52" y="88">Sentry</text>
+    </g>
+  </g>
+  <g transform="translate(494 14)">
+    <g class="tarjeta" style="animation-delay: 0.48s, 2.48s">
+      <rect class="fondo" width="104" height="104" rx="18" style="--color: #F03C2E; animation-delay: 3.60s"/>
       <path transform="translate(32 20) scale(1.6666666666666667)" fill="#F03C2E" d="M13.09 23.549a1.54 1.54 0 0 1-2.18 0L.451 13.089a1.54 1.54 0 0 1 0-2.179l7.191-7.19 2.733 2.733a1.85 1.85 0 0 0 .964 2.326v6.66a1.849 1.849 0 1 0 1.54 0V8.957l2.508 2.508a1.85 1.85 0 1 0 1.09-1.09l-2.634-2.634a1.85 1.85 0 0 0-2.378-2.377L8.73 2.63 10.91.451a1.54 1.54 0 0 1 2.179 0l10.459 10.46a1.54 1.54 0 0 1 0 2.179z"/>
       <text class="nombre" x="52" y="88">Git</text>
     </g>

@@ -4,7 +4,7 @@ export const BORDE_APAGADO = '#30363d'
 
 // Pesos de luminancia de Rec. 709: por debajo del mínimo, el logo no se ve sobre fondo oscuro.
 const PESOS_DE_LUMINANCIA = [0.2126, 0.7152, 0.0722]
-const LUMINANCIA_MINIMA = 0.15
+const LUMINANCIA_MINIMA = 0.2
 const COLOR_CLARO = 'E6EDF3'
 const DIGITOS_POR_CANAL = 2
 const MAXIMO_DE_UN_CANAL = 255
@@ -28,3 +28,7 @@ export const envolverSvg = ({ ancho, alto, titulo, estilos, contenido }) => `<sv
   </style>${contenido}
 </svg>
 `
+
+// Fondo oscuro propio: así la imagen se lee igual con el tema claro y el oscuro de GitHub.
+export const dibujarTarjetaDeFondo = ({ ancho, alto }) =>
+  `<rect x=".5" y=".5" width="${ancho - 1}" height="${alto - 1}" rx="20" fill="#0d1117" stroke="${BORDE_APAGADO}"/>`

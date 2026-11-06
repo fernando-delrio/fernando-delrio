@@ -3,6 +3,7 @@ import { join } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { dibujarCabecera } from './cabecera.mjs'
 import { dibujarFlujo } from './flujo.mjs'
+import { dibujarRevision } from './revision.mjs'
 import { CATEGORIAS } from './stack.mjs'
 import { dibujarStack } from './tarjetas-del-stack.mjs'
 
@@ -11,6 +12,7 @@ const CARPETA_DE_IMAGENES = fileURLToPath(new URL('../assets/', import.meta.url)
 const IMAGENES = [
   { archivo: 'cabecera.svg', svg: dibujarCabecera() },
   { archivo: 'flujo-ia.svg', svg: dibujarFlujo() },
+  { archivo: 'revision.svg', svg: dibujarRevision() },
   ...CATEGORIAS.map((categoria) => ({ archivo: categoria.archivo, svg: dibujarStack(categoria) })),
 ]
 

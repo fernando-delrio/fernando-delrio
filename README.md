@@ -42,33 +42,120 @@ Mi proyecto propio más grande, en producción. Pensado desde el lado del operar
 
 ## Cómo trabajo con IA
 
-Uso agentes de IA para programar, pero el código tiene que poder leerlo y cambiarlo yo sin ayuda. Para eso tengo montado un **arnés propio sobre Claude Code**:
+Uso agentes de IA para programar, pero el código tiene que poder leerlo y cambiarlo yo sin ayuda. Para eso tengo montado un **arnés propio** en el que **dos agentes de IA trabajan a la par**: uno implementa y el otro revisa. El método no depende de la herramienta: funciona con cualquier agente. Cada uno tiene su papel, la máquina vigila lo que se puede comprobar y la última palabra es mía.
 
 <p align="center">
-  <img src="./assets/flujo-ia.svg" alt="Flujo de trabajo: yo, spec, plan y tareas, implementer, revisores y hook de cierre; y vuelve a mí para revisarlo." width="100%"/>
+  <img src="./assets/flujo-ia.svg" alt="Flujo de trabajo: yo, spec y plan, un agente de IA implementa, otro agente revisa, puertas de seguridad y rendimiento, y la máquina con lint, tests y CI; y vuelve a mí, que leo el diff y hago el commit." width="100%"/>
 </p>
 
-- **Spec antes que código:** cada funcionalidad empieza por requisitos, plan y tareas que apruebo yo antes de que se toque una línea.
-- **Un agente implementa una sola tarea**, con la prueba primero, y nunca hace commit: eso lo hago yo.
-- **Agentes revisores:** uno comprueba mi norma de estilo, otro el oficio (SOLID, Clean Code, Ousterhout, McConnell) y otro la seguridad del backend (OWASP).
-- **Hook de cierre:** al terminar, pasa formateador, linter y la prueba de la norma solo a las líneas cambiadas, y devuelve los fallos al agente para que los corrija.
-- **Mi norma de estilo**, en un plugin propio: funciones cortas, guardas en lugar de `else`, tablas en lugar de cadenas de `if`, sin ternarios, nombres con sentido y errores en un solo sitio.
+### Quién hace qué
 
-Así escribo, y así tiene que escribir la IA:
+| Paso | Quién | Qué hace |
+|---|---|---|
+| Idea y prioridad | Yo | Decido qué se construye y en qué orden. |
+| Spec, plan y tareas | Agente planificador | Escribe los requisitos en formato EARS, el plan y las tareas. Un agente revisor los repasa como QA, y yo los apruebo antes de que se toque una línea. |
+| Implementación | Agente de IA 1 | Una sola tarea cada vez, con la prueba primero. Nunca hace commit. |
+| Revisión técnica | Agente de IA 2 | Revisa el diff real como ingeniero líder y puede vetarlo. Ejecuta las pruebas y comprueba cada requisito; no se fía del resumen de quien implementa. |
+| Puertas | Agentes con derecho de veto | Uno para la seguridad del backend y otro para el rendimiento de la web. Vetar es parar y explicar, nunca deshacer. |
+| Versión final | Yo | Leo el diff, decido y hago el commit. Git es solo mío: ningún agente puede hacer `add`, `commit` ni `push`. |
+
+<details>
+<summary><b>Los revisores, uno por tema</b></summary>
+
+<br>
+
+- **Norma de estilo** (`conventions-reviewer`): capas separadas, sin `else` ni `switch`, tablas en lugar de cadenas de `if`, nombres con sentido y funciones cortas.
+- **Oficio** (`craft-reviewer`): SOLID, Clean Code, Ousterhout y McConnell, en cualquier lenguaje.
+- **Seguridad** (`backend-reviewer` y `devsecops-gate`): OWASP, sesiones, contraseñas, enlaces de un solo uso y aislamiento entre clientes. Cada regla cita el requisito de la spec que la exige, para que vete por lo pactado y no por gusto.
+- **Rendimiento** (`wpo-gate`): presupuesto de JavaScript por página, imágenes y rutas.
+- **Diseño** (`design-reviewer`): tokens del sistema de diseño, accesibilidad WCAG AA y reglas de contenido.
+- **Spec** (`reviewer`): valida la implementación requisito por requisito.
+
+</details>
+
+<details>
+<summary><b>Lo que vigila la máquina</b></summary>
+
+<br>
+
+Lo que se puede comprobar no depende de la memoria de nadie:
+
+- **Linters con mi norma:** Ruff en Python y oxlint en JavaScript.
+- **Pruebas que leen el código:** sin `else`, sin `switch` ni `match`, errores solo en `attempt()`, funciones de 20 líneas y 3 parámetros como máximo.
+- **Un trinquete para las reglas nuevas** (sin ternarios, un solo nivel de bloques, sin parámetros booleanos y sin mutar): el código antiguo conserva su recuento, ningún archivo puede tener más y, cuando arreglo uno, el número solo baja. Lo nuevo nace limpio sin reescribir lo que ya funcionaba.
+- **CI en cada pull request:** pytest, Vitest, build con presupuesto de JavaScript, migraciones arriba, abajo y arriba otra vez contra PostgreSQL, y auditoría de dependencias.
+
+</details>
+
+### Cómo reviso yo
+
+<p align="center">
+  <img src="./assets/revision.svg" alt="Casi el 90 % del código que entra lo reviso yo. Leo el diff en este orden: textos, tests, docs y código." width="100%"/>
+</p>
+
+> **Gracias a [readfirst](https://github.com/fernando-delrio/readfirst-code-style), mi skill de escritura de código, leo el código más rápido y lo entiendo a la primera.** Todo el código que entra tiene la misma forma, lo escriba el agente que lo escriba: funciones cortas, guardas arriba, tablas en lugar de cadenas de `if` y errores en un solo sitio. Sé qué me voy a encontrar antes de abrir el archivo.
+
+No es que lea más deprisa: es que todo está preparado para poder leerse.
+
+1. **Cada entrega llega con el mismo resumen:** archivos tocados con una línea cada uno, qué funciona ahora que antes no, lo siguiente pendiente y los comandos de commit con las rutas exactas. Sé qué ha cambiado y por qué antes de abrir un archivo.
+2. **Cambios pequeños:** un commit por incremento, que deja el sistema funcionando. Si pasa de 100 líneas, se divide o se explica por qué no.
+3. **Leo el diff en orden de riesgo:** primero los textos que verá un cliente, después las pruebas y la documentación, y al final el código. Un test rebajado puede esconder un fallo con todo en verde; me ha pasado, y por eso miro primero ahí.
+4. **El código se lee de arriba abajo gracias a [readfirst](https://github.com/fernando-delrio/readfirst-code-style)**, mi skill de escritura de código, que cualquier agente sigue. Esto es lo que me deja leer rápido:
+   - **Funciones cortas**, de 20 líneas como máximo, con un nombre verbo + objeto que dice lo que hacen.
+   - **Guardas arriba** (`if (…) return`) y un solo nivel de bloques: no hay que llevar la cuenta de en qué rama estás.
+   - **Tablas en lugar de cadenas de `if`**: lo que cambia según un valor se lee en una sola mirada.
+   - **Cada capa hace una cosa:** el componente pinta, el hook orquesta y el servicio llama a la API. Sé en qué archivo buscar antes de abrirlo.
+   - **Los errores, en un solo sitio** (`attempt()`): no hay `try/catch` repartidos que seguir.
+
+   Si un trozo no se puede leer así, la revisión lo devuelve.
+5. **Una pregunta antes de darlo por bueno:** ¿lo pondría delante del cliente ahora mismo, sin avisar de nada? Si la respuesta es «sí, pero…», no está terminado.
+6. **Desconfío de lo que está en verde:** una comprobación que nunca salta puede estar rota. Por eso las pongo a prueba metiendo una infracción a propósito. Así descubrí dos agentes revisores que no llegaban a cargarse y no daban ningún error.
+
+### Lo que cambia readfirst
+
+La misma función, con el mismo resultado. A la izquierda, como la escribe una IA sin norma; a la derecha, como tiene que escribirla conmigo:
+
+<table>
+<tr>
+<th align="left">Sin norma</th>
+<th align="left">Con <a href="https://github.com/fernando-delrio/readfirst-code-style">readfirst</a></th>
+</tr>
+<tr>
+<td valign="top">
 
 ```ts
-const SIGUIENTE_ESTADO = {
-  pendiente: 'en_proceso',
-  en_proceso: 'listo',
-  listo: 'entregado',
-  entregado: 'entregado',
-} as const
-
-export const avanzarPedido = (pedido: Pedido) => {
-  if (pedido.isAnulado) return pedido
-  return { ...pedido, estado: SIGUIENTE_ESTADO[pedido.estado] }
+function getDiscount(customer) {
+  if (customer.tier === 'gold') {
+    return 0.2
+  } else if (customer.tier === 'silver') {
+    return 0.1
+  } else {
+    return customer.isNew ? 0.05 : 0
+  }
 }
 ```
+
+</td>
+<td valign="top">
+
+```ts
+const DISCOUNTS = { gold: 0.2, silver: 0.1 }
+const WELCOME_DISCOUNT = 0.05
+const NO_DISCOUNT = 0
+
+export const discountFor = (customer) => {
+  const rate = DISCOUNTS[customer.tier]
+  if (rate) return rate
+  if (customer.isNew) return WELCOME_DISCOUNT
+  return NO_DISCOUNT
+}
+```
+
+</td>
+</tr>
+</table>
+
+A la derecha se lee de arriba abajo: primero el descuento de la categoría y después el de cliente nuevo, cada número tiene nombre y no hay ramas que seguir. Añadir una categoría es una línea en la tabla.
 
 ---
 
@@ -84,15 +171,15 @@ export const avanzarPedido = (pedido: Pedido) => {
 
 **IA, voz y automatización**
 
-<img src="./assets/stack-ia.svg" alt="Claude Code, Vapi, Chatwoot, n8n, Mistral y Ollama"/>
+<img src="./assets/stack-ia.svg" alt="Claude Code, Codex, Vapi, Chatwoot, n8n, Mistral y Ollama"/>
 
 **Calidad y CI**
 
-<img src="./assets/stack-calidad.svg" alt="Vitest, pytest, ESLint, Prettier, Ruff y GitHub Actions"/>
+<img src="./assets/stack-calidad.svg" alt="Vitest, pytest, ESLint, Prettier, Ruff, oxlint y GitHub Actions"/>
 
-**Infraestructura y pagos**
+**Infraestructura, pagos y monitorización**
 
-<img src="./assets/stack-infra.svg" alt="Docker, Stripe y Git"/>
+<img src="./assets/stack-infra.svg" alt="Docker, Stripe, Render, Sentry y Git"/>
 
 ---
 
