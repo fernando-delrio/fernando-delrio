@@ -4,7 +4,7 @@
 
 ## Quién soy
 
-Pasé diez años soldando en talleres del metal. Hoy trabajo como **software developer** y estoy creciendo hacia **AI engineer**.
+Pasé mas de diez años soldando en talleres del metal. Hoy trabajo como **software developer** y estoy creciendo hacia **AI engineer**.
 
 Hice yo **toolsequip.es**, una web en producción que sigo manteniendo. Y estoy desarrollando desde cero **Pivoa**, la app interna de Recambios del Primer Equipo, con asistente de voz y chatbot, pensada para poder llevarla a más tiendas del grupo.
 
