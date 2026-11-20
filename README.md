@@ -4,45 +4,31 @@
 
 ## Quién soy
 
-Pasé diez años soldando en talleres del metal. Hoy trabajo como **software developer**: mantengo y escalo una web en producción y desarrollo desde cero un asistente telefónico y un chatbot que atienden a clientes reales.
+Pasé diez años soldando en talleres del metal. Hoy trabajo como **software developer** y estoy creciendo hacia **AI engineer**.
 
-Me gusta el código que se entiende a la primera, también el que escribe la IA.
+Hice yo **toolsequip.es**, una web en producción que sigo manteniendo. Y estoy desarrollando desde cero **Pivoa**, la app interna de Recambios del Primer Equipo, con asistente de voz y chatbot, pensada para poder llevarla a más tiendas del grupo.
 
----
-
-## Proyectos reales
-
-### [toolsequip.es](https://toolsequip.es) · mantenimiento y escalado
-
-Mantengo la web y la hago crecer:
-
-- **Área de cliente**, para que cada cliente siga lo suyo sin tener que llamar.
-- **Métodos de pago** integrados en la propia web.
-- **Redes sociales** conectadas con la plataforma.
-
-### Asistente telefónico y chatbot · desde cero *(código privado)*
-
-Un asistente virtual atiende el teléfono, toma los pedidos de recambios de los talleres y los deja listos para que una persona revise compatibilidad y stock.
-
-- **Asistente de voz con Vapi:** entiende el pedido, deletrea la matrícula si hay duda y llama a una API propia en FastAPI.
-- **Pedidos en PostgreSQL** con numeración segura y sin duplicados aunque Vapi reintente la llamada.
-- **Panel interno en React + TypeScript** para revisar, preparar y entregar cada pedido, con resguardo en PDF.
-- **Seguridad desde el principio:** webhook protegido con secreto, migraciones versionadas y CI con pruebas contra un PostgreSQL temporal y auditoría de dependencias.
-- **En marcha:** chatbot con **Chatwoot** para atender también por escrito.
-
-### [Weldix](https://github.com/fernando-delrio/weldix) · SaaS multi-tenant para talleres del metal · **[→ probar](https://weldix.es)**
-
-Mi proyecto propio más grande, en producción. Pensado desde el lado del operario, no desde el diagrama entidad-relación: órdenes de trabajo con máquina de estados, fichaje con QR desde tablet, stock con alertas, RRHH, mantenimiento de maquinaria, asistente de IA con el contexto del taller (Mistral) y avisos por WhatsApp con n8n.
-
-`React 19` `Vite` `Tailwind v4` `FastAPI` `SQLAlchemy` `PostgreSQL` `Stripe` `n8n` · aislamiento por `tenant_id` y capas router → service → model.
-
-> En el plan gratuito de Render: el primer inicio de sesión puede tardar hasta un minuto.
+Me gusta el código que se entiende a la primera, también el que escribe la IA. Si no lo entiendo, no entra.
 
 ---
 
 ## Cómo trabajo con IA
 
 Uso agentes de IA para programar, pero el código tiene que poder leerlo y cambiarlo yo sin ayuda. Para eso tengo montado un **arnés propio** en el que **dos agentes de IA trabajan a la par**: uno implementa y el otro revisa. El método no depende de la herramienta: funciona con cualquier agente. Cada uno tiene su papel, la máquina vigila lo que se puede comprobar y la última palabra es mía.
+
+### Los bloques del método
+
+| # | Bloque | Cómo lo aplico |
+|---|---|---|
+| 1 | **Fundamentos: LLMs, modelos y herramientas** | Un modelo solo ve su contexto y puede equivocarse con seguridad: lo que importa va en el contexto y lo que dice se comprueba fuera. Elijo modelo y esfuerzo según la tarea, con la skill `choose-model`. |
+| 2 | **Arnés: agente, guardarraíles y contexto** | Un `AGENTS.md` corto como única fuente de reglas, memoria del proyecto de pocas líneas, permisos que impiden a los agentes tocar secretos y git, y un hook previo al push que ejecuta todas las pruebas. Lo que importa se impide, no se pide. |
+| 3 | **Arnés avanzado: skills y MCPs** | Una skill por cada procedimiento que repito, y un MCP solo si resuelve un problema que ya tuve. Cada herramienta cuesta contexto y abre superficie de ataque. |
+| 4 | **Spec-Driven Development** | Spec, plan, tareas, una tarea cada vez y revisión requisito a requisito. Un requisito no se da por hecho hasta que su prueba se ha ejecutado. |
+| 5 | **Multiagente y subagentes** | Quien escribe y quien revisa son distintos, a veces incluso otro modelo. Cada subagente recibe un solo encargo con el contexto limpio. |
+| 6 | **Personalización de sistemas** | La norma de estilo, el flujo y los roles viven en mis [plugins](#herramientas-que-publico) y los usa cualquier proyecto, en lugar de repetir prompts. |
+| 7 | **Construir con LLMs** | Medir en lugar de mirar: casos con resultado esperado, línea base, coste y duración, y pruebas de ataque. En preparación sobre el asistente de voz. |
+
+**Siempre con control y criterio.** Antes de cada commit leo el diff entero, lo explico en dos frases sin abrir el chat y digo qué prueba fallaría si estuviera mal. Si no lo entiendo, no entra.
 
 <p align="center">
   <img src="./assets/flujo-ia.svg" alt="Flujo de trabajo: yo, spec y plan, un agente de IA implementa, otro agente revisa, puertas de seguridad y rendimiento, y la máquina con lint, tests y CI; y vuelve a mí, que leo el diff y hago el commit." width="100%"/>
@@ -156,6 +142,70 @@ export const discountFor = (customer) => {
 </table>
 
 A la derecha se lee de arriba abajo: primero el descuento de la categoría y después el de cliente nuevo, cada número tiene nombre y no hay ramas que seguir. Añadir una categoría es una línea en la tabla.
+
+---
+
+## Ruta de AI engineer
+
+Mi ruta de estudio, con estado y entregable por bloque y contrastada con el [roadmap de AI Engineer de roadmap.sh](https://roadmap.sh/ai-engineer): [ruta-ai-engineer/](./ruta-ai-engineer/).
+
+## Herramientas que publico
+
+Tres plugins de Claude Code, cada uno con su repositorio y su instalación:
+
+| Repositorio | Para qué sirve |
+|---|---|
+| [readfirst-code-style](https://github.com/fernando-delrio/readfirst-code-style) | Norma de estilo para que el código lo lea primero una persona, con revisores y refactorización |
+| [agentic-engineering-guardrails](https://github.com/fernando-delrio/agentic-engineering-guardrails) | Arnés para trabajar con agentes: bloquea `git add`, `commit` y `push` y trae el flujo con specs |
+| [business-crew](https://github.com/fernando-delrio/business-crew) | 18 agentes de rol y ciclo Shape Up para quien programa solo |
+
+## Skills que escribo
+
+Una skill es un procedimiento que Claude Code carga solo cuando toca. Estas las escribo yo:
+
+| Skill | Dónde | Qué hace |
+|---|---|---|
+| `code-style` | readfirst | La norma de código: se lee de arriba abajo, sin `else`, con funciones cortas y errores en un solo sitio |
+| `refactor` | readfirst | Guía de refactorización y método para aplicarla sin romper nada |
+| `clean-ai-traces` | readfirst | Quita lo que la IA deja en el código (comentarios de relleno, emojis, firmas) sin tocar lo que hace |
+| `project-structure` | readfirst | Carpetas, documentación y forma de trabajar de un proyecto |
+| `flujo-sdd` | guardrails | Spec-Driven Development con subagentes y aprobaciones humanas |
+| `montar-guardarrailes` | guardrails | Monta en un proyecto el arnés para trabajar con agentes |
+| `choose-model` | readfirst | Estudia la tarea y elige modelo y esfuerzo antes de empezar; delega en un subagente si hace falta otro modelo |
+| `delegate-and-review` | readfirst | Otro agente escribe el código; Claude prepara el encargo y revisa el diff sin fiarse del resumen |
+| `critical-advisor` | readfirst | Consejo honesto sin adulación: cuestiona suposiciones y etiqueta la confianza |
+| `shape-up-cycle`, `decision-framing`, `design-direction` | business-crew | Ciclo de trabajo de Shape Up, comparar caminos y dirección visual |
+
+---
+
+## Proyectos reales
+
+### [toolsequip.es](https://toolsequip.es) · web propia en producción
+
+La hice yo y la sigo mejorando:
+
+- **Área de cliente**, para que cada cliente siga lo suyo sin tener que llamar.
+- **Métodos de pago** integrados en la propia web.
+- **Redes sociales** conectadas con la plataforma.
+
+### Pivoa · app interna de Recambios del Primer Equipo · desde cero *(código privado)*
+
+La app interna de la tienda, pensada para poder llevarla a más tiendas del grupo. Reúne el asistente de voz, el panel de pedidos y las herramientas del equipo. Un asistente virtual atiende el teléfono, toma los pedidos de recambios de los talleres y los deja listos para que una persona revise compatibilidad y stock.
+
+- **Asistente de voz con Vapi:** entiende el pedido, deletrea la matrícula si hay duda y llama a una API propia en FastAPI.
+- **Pedidos en PostgreSQL** con numeración segura y sin duplicados aunque Vapi reintente la llamada.
+- **Portal interno en React + TypeScript** para revisar, preparar y entregar cada pedido, con cuentas personales, perfiles, permisos y segundo factor. El servidor vuelve a autorizar cada API.
+- **Seguridad desde el principio:** webhook protegido con secreto, migraciones versionadas y CI con pruebas contra un PostgreSQL temporal y auditoría de dependencias.
+- **En marcha:** chatbot con **Chatwoot** para atender también por escrito.
+- **En preparación:** evals del asistente de voz, con casos simulados, línea base de acierto, coste y duración por ejecución, y casos adversarios.
+
+### [Weldix](https://github.com/fernando-delrio/weldix) · SaaS multi-tenant para talleres del metal · **[→ probar](https://weldix.es)**
+
+Mi proyecto propio más grande, en producción. Pensado desde el lado del operario, no desde el diagrama entidad-relación: órdenes de trabajo con máquina de estados, fichaje con QR desde tablet, stock con alertas, RRHH, mantenimiento de maquinaria, asistente de IA con el contexto del taller (Mistral) y avisos por WhatsApp con n8n.
+
+`React 19` `Vite` `Tailwind v4` `FastAPI` `SQLAlchemy` `PostgreSQL` `Stripe` `n8n` · aislamiento por `tenant_id` y capas router → service → model.
+
+> En el plan gratuito de Render: el primer inicio de sesión puede tardar hasta un minuto.
 
 ---
 
