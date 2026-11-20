@@ -79,14 +79,14 @@ Lo que se puede comprobar no depende de la memoria de nadie:
   <img src="./assets/revision.svg" alt="Casi el 90 % del código que entra lo reviso yo. Leo el diff en este orden: textos, tests, docs y código." width="100%"/>
 </p>
 
-> **Gracias a [readfirst](https://github.com/fernando-delrio/readfirst-code-style), mi skill de escritura de código, leo el código más rápido y lo entiendo a la primera.** Todo el código que entra tiene la misma forma, lo escriba el agente que lo escriba: funciones cortas, guardas arriba, tablas en lugar de cadenas de `if` y errores en un solo sitio. Sé qué me voy a encontrar antes de abrir el archivo.
+> **Gracias a [readfirst](https://github.com/fernando-delrio/readfirst), mi skill de escritura de código, leo el código más rápido y lo entiendo a la primera.** Todo el código que entra tiene la misma forma, lo escriba el agente que lo escriba: funciones cortas, guardas arriba, tablas en lugar de cadenas de `if` y errores en un solo sitio. Sé qué me voy a encontrar antes de abrir el archivo.
 
 No es que lea más deprisa: es que todo está preparado para poder leerse.
 
 1. **Cada entrega llega con el mismo resumen:** archivos tocados con una línea cada uno, qué funciona ahora que antes no, lo siguiente pendiente y los comandos de commit con las rutas exactas. Sé qué ha cambiado y por qué antes de abrir un archivo.
 2. **Cambios pequeños:** un commit por incremento, que deja el sistema funcionando. Si pasa de 100 líneas, se divide o se explica por qué no.
 3. **Leo el diff en orden de riesgo:** primero los textos que verá un cliente, después las pruebas y la documentación, y al final el código. Un test rebajado puede esconder un fallo con todo en verde; me ha pasado, y por eso miro primero ahí.
-4. **El código se lee de arriba abajo gracias a [readfirst](https://github.com/fernando-delrio/readfirst-code-style)**, mi skill de escritura de código, que cualquier agente sigue. Esto es lo que me deja leer rápido:
+4. **El código se lee de arriba abajo gracias a [readfirst](https://github.com/fernando-delrio/readfirst)**, mi skill de escritura de código, que cualquier agente sigue. Esto es lo que me deja leer rápido:
    - **Funciones cortas**, de 20 líneas como máximo, con un nombre verbo + objeto que dice lo que hacen.
    - **Guardas arriba** (`if (…) return`) y un solo nivel de bloques: no hay que llevar la cuenta de en qué rama estás.
    - **Tablas en lugar de cadenas de `if`**: lo que cambia según un valor se lee en una sola mirada.
@@ -104,7 +104,7 @@ La misma función, con el mismo resultado. A la izquierda, como la escribe una I
 <table>
 <tr>
 <th align="left">Sin norma</th>
-<th align="left">Con <a href="https://github.com/fernando-delrio/readfirst-code-style">readfirst</a></th>
+<th align="left">Con <a href="https://github.com/fernando-delrio/readfirst">readfirst</a></th>
 </tr>
 <tr>
 <td valign="top">
@@ -155,7 +155,7 @@ Tres plugins de Claude Code, cada uno con su repositorio y su instalación:
 
 | Repositorio | Para qué sirve |
 |---|---|
-| [readfirst-code-style](https://github.com/fernando-delrio/readfirst-code-style) | Norma de estilo para que el código lo lea primero una persona, con revisores y refactorización |
+| [readfirst](https://github.com/fernando-delrio/readfirst) | Norma de estilo para que el código lo lea primero una persona, con revisores y refactorización |
 | [agentic-engineering-guardrails](https://github.com/fernando-delrio/agentic-engineering-guardrails) | Arnés para trabajar con agentes: bloquea `git add`, `commit` y `push` y trae el flujo con specs |
 | [business-crew](https://github.com/fernando-delrio/business-crew) | 18 agentes de rol y ciclo Shape Up para quien programa solo |
 
